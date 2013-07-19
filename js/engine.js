@@ -6,10 +6,10 @@ $(function () {
 /* rgba(41,101,156, 1); */
 /* rgba(255,194,84, 1); */
 /* rgba(199,66,56, 1); */
-    $('.tt-dev').tooltipster({
+    $('.get-down').tooltipster({
        animation: 'grow',
        content:
-       'Пока я прокрастинирую, в попытках сверстать историю создания к каждому из проектов &mdash; вы можете посмотреть на них в живую, нажав на эту кнопку. Но история несомненно интересней.',
+       'Посмотреть портфолио',
        position: 'bottom', theme: '.tooltipster-punk', maxWidth: 260,
         iconTheme: '.icon-cog',});
 
@@ -43,6 +43,23 @@ $(function () {
    trigger: 'hover',
    updateAnimation: true
 });
+
+
+    $('.get-down').hover(function () {
+        $('i', this).transition({color: 'rgba(0,0,0,0.4)'});
+        $(this).transition({ y: '-15px',
+            backgroundColor: 'rgba(0,0,0,0.2)', boxShadow: '0px 8px 16px rgba(0,0,0,0.5)'
+        });
+    }, function () {
+        $('i', this).transition({color: 'rgba(0,0,0,0.2)'});
+        $(this).transition({ y: '15px',
+            backgroundColor: 'rgba(0,0,0,0.1)', boxShadow: '0px 4px 8px rgba(0,0,0,0.4)'
+        });
+    });
+
+    $('.get-down').click(function(){
+
+    });
 
     $('.pf-grid figcaption a').hover(function () {
         $(this).css({

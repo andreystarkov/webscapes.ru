@@ -39,7 +39,7 @@
 
 	header
 	{
-		margin: 0 0 3em 0;
+		margin: 1em 0 2em 0;
 	}
 
 		header > span
@@ -114,7 +114,7 @@
 
 		.wrapper-first
 		{
-			padding-top: 12em;
+			padding-top: 11em;
 		}
 
 		.wrapper-style4 .row-special

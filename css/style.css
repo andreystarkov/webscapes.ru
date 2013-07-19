@@ -208,6 +208,61 @@
 			width: auto;
 		}
 
+
+
+/*
+	.pf-button a {
+
+	position:relative;
+	width: 360px;
+	color:rgba(255,255,255,0.8);
+	display:block;
+	text-decoration:none;
+	margin:0 auto;
+	font-family: 'Open Sans Condensed';
+	font-weight: 300;
+	font-size: 35px;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+	border-radius:6px;
+	font-weight: 400;
+	border:solid 1px #554a43;
+	background: #4E3F35;
+	text-align:center;
+	padding:15px 10px;
+	-webkit-box-shadow: 0px 6px 0px #1d140e;
+    -moz-box-shadow: 0px 6px 0px #1d140e;
+    box-shadow: 0px 6px 0px #1d140e;
+	}
+
+*/
+	.pf-button { width: 420px; border-radius: 6px; padding: 30px;
+
+	margin: 0 auto; position: relative; top: 50px;
+	}
+
+	.pf-button a {
+	position:relaive;
+	width: 290px;
+	color: rgba(255,255,255,0.8);
+	display:block;
+	text-decoration:none;
+	margin:0 auto;
+	font-family: 'Open Sans Condensed';
+	font-weight: 300;
+	font-size: 35px;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+	border-radius:6px;
+	font-weight: 400;
+	border:solid 1px #693935;
+	background: #B9493E;
+	text-align:center;
+	padding:15px 10px;
+	-webkit-box-shadow: 0px 6px 0px #693935;
+    -moz-box-shadow: 0px 6px 0px #693935;
+    box-shadow: 0px 6px 0px #693935;
+    }
+
+
 	.button
 	{
 		position: relative;
