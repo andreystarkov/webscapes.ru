@@ -46,7 +46,7 @@
 
 	h1, h2, h3, h4, h5, h6
 	{
-		color: #3e3e3e;
+		color: #e5ded7;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
@@ -477,7 +477,7 @@
 
 	.wrapper-style3
 	{
-		background-color: #f4f4f4;
+		background-color: #4d4741;
 		/*text-shadow: 1px 1px 0px #fff; */
 	}
 
@@ -511,7 +511,7 @@
 
 	#nav
 	{
-		background-color: #282828;
+		background-color: #4b453f;
 		text-align: center;
 		position: fixed;
 		left: 0;
@@ -535,14 +535,14 @@
 		{
 			position: relative;
 			display: block;
-			color: #fff;
+			color: #e5ded7 !important;
 			text-decoration: none;
 			outline: 0;
 		}
 
 			#nav a:hover
 			{
-				color: #fff !important;
+				color: #e5ded7 !important;
 			}
 
 			#nav a.active:before

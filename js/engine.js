@@ -13,11 +13,11 @@ $(function () {
        position: 'bottom', theme: '.tooltipster-punk', maxWidth: 260,
         iconTheme: '.icon-cog',});
 
-    $('.tt-go').tooltipster({
+    $('.tt-dev').tooltipster({
    animation: 'grow',
    arrow: true,
    arrowColor: '',
-   content: 'Сделать мне приятно.',
+   content: 'Посмотреть в живую.',
    delay: 200,
    fixedWidth: 0,
    maxWidth: 0,
@@ -35,7 +35,7 @@ $(function () {
    offsetX: 0,
    offsetY: 0,
    onlyOne: true,
-   position: 'right',
+   position: 'bottom',
    speed: 350,
    timer: 0,
    theme: '.tooltipster-punk',
@@ -62,40 +62,40 @@ $(function () {
     });
 
     $('.pf-grid figcaption a').hover(function () {
-        $(this).css({
-            color: '#fff'
-        }).animate({
-            backgroundColor: '#e15c2e'
+        $(this).transition({
+            boxShadow: 'inset 0 0 60px rgba(0,0,0,0.3)',
+            backgroundColor: 'rgba(116, 136, 148, 1)'
         });
     }, function () {
-        $(this).animate({
-            backgroundColor: '#EF7247'
+        $(this).transition  ({
+            boxShadow: 'inset 0 0 0 rgba(0,0,0,0)',
+            backgroundColor: 'rgba(116, 136, 148, 0.5)'
+
         });
     });
 
     $('.era').hover(function () {
 
-        var pf = $('.point-frame', this);
-
         $('.timeline').fadeToggle();
+        $('.point-frame', this).transition({
+                opacity: 1,
+                x: '-50px'
+            });
 
         $('.point', this).transition({
-            backgroundColor: '#EFEDDF',
-            borderBottomColor: '#5DBEA9',
+            backgroundColor: '#cbc3ba',
+            borderBottomColor: '#b16e52',
             y: '-30px',
             boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
             color: '#111'
         }, function () {
-            pf.transition({
-                opacity: 1,
-                x: '-50px'
-            });
+
         });
 
         $(this).animate({
-            backgroundColor: '#EFEDDF',
+            backgroundColor: '#c4b7ab',
             boxShadow: '1px 4px 16px rgba(0,0,0,0.3)',
-            borderLeftColor: '#5DBEA9',
+            borderLeftColor: '#b16e52',
         });
 
     }, function () {
@@ -109,10 +109,10 @@ $(function () {
 
         $('.point', this).transition({
             y: '30px',
-            color: 'rgba(146,47,49,0.2)',
-            borderBottomColor: 'rgba(78,63,53,0.1);',
+            color: 'rgba(229,222,215,0.5);',
+            borderBottomColor: 'rgba(229,222,215,0.2);',
             backgroundColor: 'transparent',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.2)'
+            boxShadow: '0 1px 3px rgba(0,0,0,0)'
         });
 
         $(this).animate({
