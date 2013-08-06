@@ -298,8 +298,8 @@
             <div class="wrapper wrapper-style4">
                 <article id="contact">
                     <header>
-                        <h2>У вас есть интересный проект?</h2>
-                        <span>Расскажите о нем.</span>
+                        <h2>У вас есть интересная идея?</h2>
+                        <span>Или же, просто есть о чем сказать?</span>
                     </header>
                     <div class="call-box" style="margin-top: 20px">
                         <div class="row">
@@ -309,15 +309,15 @@
                                     <div>
                                         <div class="row half">
                                             <div class="6u">
-                                                <input type="text" name="name" id="name" placeholder="Ваше имя" />
+                                                <input type="text" name="name" id="name" placeholder="Ваше имя." />
                                             </div>
                                             <div class="6u">
-                                                <input type="text" class="tt-warning" name="email" id="email" placeholder="Ваш номер телефона или электронной почты." />
+                                                <input type="text" class="tt-warning" name="email" id="email" placeholder="Способ обратной связи." />
                                             </div>
                                         </div>
                                         <div class="row half">
                                             <div class="12u">
-                                                <textarea name="text" id="message" placeholder="Задайте свой вопрос (заполнять не обязательно)"></textarea>
+                                                <textarea name="text" id="message" placeholder="Задайте свой вопрос! Или предложите ответ."></textarea>
                                             </div>
                                         </div>
                                         <div class="row">
