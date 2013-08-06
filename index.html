@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Andrey Starkov</title>
+		<title>Webscapes</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
 		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="keywords" content="разрабока сайтов, front end, оренбург" />
 
 		<link rel="stylesheet" type="text/css" href="css/portfolio.css" />
 
@@ -12,14 +13,39 @@
 
 		<link rel="stylesheet" type="text/css"  href="css/root.css" />
 
-
-
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/tooltipster.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/toucheffects.js"></script>
+		<script src="js/transit.js"></script>
+		<script src="js/colors.js"></script>
+		<script src="js/tooltipster.js"></script>
+		<script src="js/shadow.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/cookie.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<script>
+		$(function () {
+			$('.carousel').carousel();
+			var pdtPlay = videojs("pdt-video");
+
+			$('#pdt-1').on('hidden.bs.modal', function () {
+				pdtPlay.pause();
+			});
+		});
+		</script>
+  		<link href="http://vjs.zencdn.net/4.1/video-js.css" rel="stylesheet">
+		<script src="http://vjs.zencdn.net/4.1/video.js"></script>
+
+		<script src="js/engine.js"></script>
 
 		<!--[if IE 7]>
 		  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome-ie7.min.css">
@@ -33,17 +59,23 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
-
+		<style>
+		.modal { top: 10% !important; left: -250px !important; }
+		.mve .modal-content { padding:0px; width: 960px; padding-bottom: 10px; background: #34302c; /* #c4b7ab */ }
+		.mve .modal-content .icon-off { margin-left: 5px; }
+		.mve .modal-content i { transition: all 1s ease; text-shadow: 0px 3px 6px rgba(0,0,0,0.7);}
+		.btn-shut { margin-top: 10px; background: rgba(71,65,59, 0.1); color: rgba(225,215,206,0.5); text-shadow: 0px 3px 8px rgba(0,0,0,0.1); 	}
+		</style>
 	</head>
 	<body>
+
 
 		<!-- Nav -->
 			<nav id="nav">
 				<ul>
 					<li><a href="#top"><i style="text-decoration: none" class="icon-long-arrow-up"></i></a></li>
-					<li><a href="#work">Что происходит?</a></li>
-					<li><a href="#portfolio">Кто здесь?</a></li>
-					<li><a href="#contact">Прекратите.</a></li>
+					<li><a href="#work">Портфолио</a></li>
+					<li><a href="#contact">Связаться с нами</a></li>
 				</ul>
 			</nav>
 
@@ -59,7 +91,6 @@
 						<div class="15u intro-text">
 							<h1>Вебскейпс</h1>
 							<span>виртуальные пространства</span>
-
 
 							<div class="get-down">
 								<a href="#work">
@@ -179,7 +210,7 @@
 									<h3>Продмашпласт</h3>
 									<span>Дизайн, разработка.</span>
 
-									<a target="_blank" href="#" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
+									<a data-toggle="modal" href="#pmp-1" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
 
 								</figcaption>
 							</figure>
@@ -205,7 +236,7 @@
 									<h3>Пыль да Таун.</h3>
 									<span>Видеосъемка, монтаж.</span>
 
-									<a target="_blank" href="https://vimeo.com/51458451" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
+									<a data-toggle="modal" href="#pdt-1" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
 								</figcaption>
 							</figure>
 						</li>
@@ -218,7 +249,7 @@
 									<h3>Малай - Начало.</h3>
 									<span>Видеосъемка, монтаж.</span>
 
-									<a href="https://vimeo.com/44561710" target="_blank" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
+									<a data-toggle="modal" href="#malay" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
 								</figcaption>
 							</figure>
 						</li>
@@ -258,8 +289,8 @@
 				</div>
 
 					<footer>
-						<p>The important thing is not to stop questioning.  <br>
-						   &mdash; uriosity has its own reason for existing.
+						<p>And most important, have the courage to follow your heart and intuition.  <br>
+						   &mdash; Everything else is secondary.
 						</p>
 					<!-- <a href="#contact" class="button button-big">Связаться со мной</a> -->
 					</footer>
@@ -270,68 +301,43 @@
 			<div class="wrapper wrapper-style4">
 				<article id="contact">
 					<header>
-						<h2>У вас есть для меня интересный проект?</h2>
-						<span>Задайте вопрос здесь. Я отвечу в кратчайшие сроки.</span>
+						<h2>У вас есть интересный проект?</h2>
+						<span>Расскажите о нем.</span>
 					</header>
-					<div>
+					<div class="call-box" style="margin-top: 20px">
 						<div class="row">
 							<div class="12u">
+
 								<form method="post" action="#">
 									<div>
 										<div class="row half">
 											<div class="6u">
-												<input type="text" name="name" id="name" placeholder="Как вас зовут?" />
+												<input type="text" name="name" id="name" placeholder="Ваше имя" />
 											</div>
 											<div class="6u">
-												<input type="text" name="email" id="email" placeholder="Как с вами связаться?" />
+												<input type="text" class="tt-warning" name="email" id="email" placeholder="Ваш номер телефона или электронной почты." />
 											</div>
 										</div>
 										<div class="row half">
 											<div class="12u">
-												<input type="text" name="subject" id="subject" placeholder="В кратце" />
-											</div>
-										</div>
-										<div class="row half">
-											<div class="12u">
-												<textarea name="message" id="message" placeholder="А теперь &mdash; поподробнее."></textarea>
+												<textarea name="text" id="message" placeholder="Задайте свой вопрос (заполнять не обязательно)"></textarea>
 											</div>
 										</div>
 										<div class="row">
 											<div class="12u">
-												<a href="#" class="button form-button-submit">Отправить сообщение</a>
-												<a href="#" class="button button-alt form-button-reset">Очистить форму</a>
+												<div id="button-send" class="btn-flat tt-sent">Отправить сообщение</div>
+
 											</div>
 										</div>
 									</div>
 								</form>
+
 							</div>
+
 						</div>
-						<div class="row row-special">
-							<div class="12u">
-								<h3 class="thin">Ещё, меня можно найти здесь:</h3>
-								<ul class="social">
-									<li class="twitter"><a href="http://twitter.com/n33co" class="icon icon-twitter"><span>Twitter</span></a></li>
-									<li class="facebook"><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
-									<li class="dribbble"><a href="http://dribbble.com/n33" class="icon icon-dribbble"><span>Dribbble</span></a></li>
-									<li class="linkedin"><a href="#" class="icon icon-linkedin"><span>LinkedIn</span></a></li>
-									<li class="tumblr"><a href="#" class="icon icon-tumblr"><span>Tumblr</span></a></li>
-									<li class="googleplus"><a href="#" class="icon icon-google-plus"><span>Google+</span></a></li>
-									<li class="github"><a href="http://github.com/n33" class="icon icon-github"><span>Github</span></a></li>
-									<!--
-									<li class="rss"><a href="#" class="icon icon-rss"><span>RSS</span></a></li>
-									<li class="instagram"><a href="#" class="icon icon-instagram"><span>Instagram</span></a></li>
-									<li class="foursquare"><a href="#" class="icon icon-foursquare"><span>Foursquare</span></a></li>
-									<li class="skype"><a href="#" class="icon icon-skype"><span>Skype</span></a></li>
-									<li class="soundcloud"><a href="#" class="icon icon-soundcloud"><span>Soundcloud</span></a></li>
-									<li class="youtube"><a href="#" class="icon icon-youtube"><span>YouTube</span></a></li>
-									<li class="blogger"><a href="#" class="icon icon-blogger"><span>Blogger</span></a></li>
-									<li class="flickr"><a href="#" class="icon icon-flickr"><span>Flickr</span></a></li>
-									<li class="vimeo"><a href="#" class="icon icon-vimeo"><span>Vimeo</span></a></li>
-									-->
-								</ul>
-							</div>
-						</div>
+
 					</div>
+
 					<footer>
 						<p id="copyright">
 							&copy; 2013 Andrey Starkov.
@@ -340,16 +346,80 @@
 				</article>
 			</div>
 
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-		<script src="js/toucheffects.js"></script>
-		<script src="js/transit.js"></script>
-		<script src="js/colors.js"></script>
-		<script src="js/tooltipster.js"></script>
-		<script src="js/shadow.js"></script>
-		<script src="js/config.js"></script>
-		<script src="js/skel.min.js"></script>
+<!-- Modal -->
 
-		<script src="js/engine.js"></script>
+  <div class="modal fade mve" id="pdt-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+		<video id="pdt-video" style="margin-left: -1px; margin-top: -2px" class="video-js vjs-default-skin"
+		controls preload="auto" width="960" height="540" poster="images/pdt-prev.jpg">
+			 <source src="videos/pdt.mp4" type='video/mp4' />
+		</video>
+
+          <button type="button" class="btn btn-shut" data-dismiss="modal"><i class="icon-off icon-3x"></i> </button>
+          <button type="button" class="btn btn-shut"><i class="icon-thumbs-up icon-3x"></i> </button>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<!-- Modal -->
+
+  <div class="modal fade mve" id="malay">
+    <div class="modal-dialog">
+      <div class="modal-content">
+		<video id="pdt-video" style="margin-left: -1px; margin-top: -2px" class="video-js vjs-default-skin"
+		controls preload="auto" width="960" height="540" poster="images/malay-prev.jpg">
+			 <source src="videos/m-nachalo.mp4" type='video/mp4' />
+		</video>
+
+          <button type="button" class="btn btn-shut" data-dismiss="modal"><i class="icon-off icon-3x"></i> </button>
+          <button type="button" class="btn btn-shut"><i class="icon-heart icon-3x"></i> </button>
+          <button type="button" class="btn btn-shut"><i class="icon-youtube-play icon-3x"></i> </button>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<!-- Modal -->
+
+  <div class="modal fade" id="pmp-1">
+    <div class="modal-dialog">
+      <div class="modal-content" style="height: 730px; width: 925px;">
+
+     <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/pmp-1.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="images/pmp-2.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="images/pmp-3.jpg" alt="">
+          </div>
+
+          <div class="item">
+            <img src="images/pmp-4.jpg" alt="">
+          </div>
+
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <span class="icon-next"></span>
+        </a>
+      </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
 
 	</body>
 </html>
