@@ -156,4 +156,26 @@ $(function () {
 
     }, function () {
 
+        $('.timeline').fadeToggle();
+
+        $('.point-frame', this).transition({
+            opacity: 0,
+            x: '50px'
+        });
+
+        $('.point', this).transition({
+            y: '30px',
+            color: 'rgba(229,222,215,0.5);',
+            borderBottomColor: 'rgba(229,222,215,0.2);',
+            backgroundColor: 'transparent',
+            boxShadow: '0 1px 3px rgba(0,0,0,0)'
+        });
+
+        $(this).animate({
+            backgroundColor: 'transparent',
+            color: 'rgba(146,47,49,0.2)',
+            boxShadow: '0 3px 6px rgba(0,0,0,0.0)',
+            borderLeftColor: 'transparent'
+        });
+    });
 });
