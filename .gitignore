@@ -29,7 +29,7 @@ local.properties
 .buildpath
 
 *.mp4
-
+.realsync
 #################
 ## Visual Studio
 #################
