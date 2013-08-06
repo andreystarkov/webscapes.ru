@@ -1,6 +1,5 @@
 $(function () {
 
- $.cookie('sent', '');
   if($.cookie('sent') == '1'){
       $('#button-send').html('<i class="icon-ok-circle icon-large"></i> Ваша заявка принята');
       $('#button-send').animate({color: 'rgba(255,255,255,1)'});
@@ -52,7 +51,7 @@ $(function () {
 
     $('.tt-sent').tooltipster({
        animation: 'grow',
-       content:  '<i class="icon-ok-circle tt-ico icon-4x"></i><span class="tt-txt">Спасибо за обращение! Ваша заявка была отправлена специалисту. Он свяжется с вами, удобным для Вас способом в кратчайшие сроки.</span>',
+       content:  '<i class="icon-ok-circle tt-ico icon-4x"></i><span class="tt-txt">Спасибо за обращение! Ваша заявка была отправлена. Мы свяжемся с вами, удобным для Вас способом в кратчайшие сроки.</span>',
        position: 'top', theme: '.tooltipster-punk', maxWidth: 510, trigger: 'click' });
   $('.tt-sent').tooltipster('disable');
 

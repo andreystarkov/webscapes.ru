@@ -1,10 +1,6 @@
 <?php
 
-// Change these two variables to meet your needs.
-
-$myemail = 'im@andreystarkov.ru';
-$subject = 'webscapes.ru';
-
+    // hate this shit.
 
     $name = stripslashes($_POST[name]);
     $email = stripslashes($_POST[email]);
@@ -14,50 +10,50 @@ $subject = 'webscapes.ru';
     $server = $_SERVER[SERVER_NAME];
     $browser = $_SERVER[HTTP_USER_AGENT];
 
+    $myemail = 'im@andreystarkov.ru';
+    $subject = 'webscapes.ru';
 
-    if(!$email)
-    {
+    if(!$email){
         $status .= "No back.<br>";
     }
 
-setcookie("nospam", "", time()-3600);
 
-if($_COOKIE['nospam'] == ""){
-    if(!$status)
-    {
-        $header = "From: $email\r\nReply-To: $email\r\n";
+    if($_COOKIE['nospam'] == ""){
+        if(!$status){
+            $header = "From: $email\r\nReply-To: $email\r\n";
 
-		$message = "
-		Имя отправителя: $name
-		Обратная связь: $email
+    		$message = "
+    		Имя отправителя: $name
+    		Обратная связь: $email
 
-		$text
+    		$text
 
-		---
+    		---
 
-		IP: $remote_host
-		CL: $browser
-		";
+    		IP: $remote_host
+    		CL: $browser
+    		";
 
-        if(mail($myemail, $subject, $message, $header)){
-            $status = "Thank you for your Feedback!!<br><br>";
-			setcookie("nospam", $remote_host, time()+500);
+            if(mail($myemail, $subject, $message, $header)){
+                $status = "Thank you for your Feedback!!<br><br>";
+    			setcookie("nospam", $remote_host, time()+500);
+            }
+
         }
 
+    	$current = "<br><br>name: ".$name."<br>back: ".$email."<br><br>text: ".$text."<br><br><br>current: ".$current."<br><br><hr>".$_COOKIE['sent'];
+
     }
-	$current = "<br><br>name: ".$name."<br>back: ".$email."<br><br>text: ".$text."<br><br><br>current: ".$current."<br><br><hr>".$_COOKIE['sent'];
 
-} else
+// $current = "Cookie = ".$_COOKIE['nospam'];
+//$file = 'debug.html';
 
-$current = "Cookie = ".$_COOKIE['nospam'];
-$file = 'debug.html';
-
-file_put_contents($file, $current);
+//file_put_contents($file, $current);
 
 
-$referer = $_SERVER[HTTP_REFERER];
+    $referer = $_SERVER[HTTP_REFERER];
 
-if(!preg_match('#^http://[a-z0-9-]+.([a-z0-9-]+.)?[a-z]+#i', $referer))
-{
-    unset($referer);
-}
+    if(!preg_match('#^http://[a-z0-9-]+.([a-z0-9-]+.)?[a-z]+#i', $referer))
+    {
+        unset($referer);
+    }

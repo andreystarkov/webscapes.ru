@@ -32,16 +32,6 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 
-		<script>
-		$(function () {
-			$('.carousel').carousel();
-			var pdtPlay = videojs("pdt-video");
-
-			$('#pdt-1').on('hidden.bs.modal', function () {
-				pdtPlay.pause();
-			});
-		});
-		</script>
   		<link href="http://vjs.zencdn.net/4.1/video-js.css" rel="stylesheet">
 		<script src="http://vjs.zencdn.net/4.1/video.js"></script>
 
@@ -346,80 +336,7 @@
 				</article>
 			</div>
 
-<!-- Modal -->
-
-  <div class="modal fade mve" id="pdt-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-		<video id="pdt-video" style="margin-left: -1px; margin-top: -2px" class="video-js vjs-default-skin"
-		controls preload="auto" width="960" height="540" poster="images/pdt-prev.jpg">
-			 <source src="videos/pdt.mp4" type='video/mp4' />
-		</video>
-
-          <button type="button" class="btn btn-shut" data-dismiss="modal"><i class="icon-off icon-3x"></i> </button>
-          <button type="button" class="btn btn-shut"><i class="icon-thumbs-up icon-3x"></i> </button>
-
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-<!-- Modal -->
-
-  <div class="modal fade mve" id="malay">
-    <div class="modal-dialog">
-      <div class="modal-content">
-		<video id="pdt-video" style="margin-left: -1px; margin-top: -2px" class="video-js vjs-default-skin"
-		controls preload="auto" width="960" height="540" poster="images/malay-prev.jpg">
-			 <source src="videos/m-nachalo.mp4" type='video/mp4' />
-		</video>
-
-          <button type="button" class="btn btn-shut" data-dismiss="modal"><i class="icon-off icon-3x"></i> </button>
-          <button type="button" class="btn btn-shut"><i class="icon-heart icon-3x"></i> </button>
-          <button type="button" class="btn btn-shut"><i class="icon-youtube-play icon-3x"></i> </button>
-
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-<!-- Modal -->
-
-  <div class="modal fade" id="pmp-1">
-    <div class="modal-dialog">
-      <div class="modal-content" style="height: 730px; width: 925px;">
-
-     <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="images/pmp-1.jpg" alt="">
-          </div>
-          <div class="item">
-            <img src="images/pmp-2.jpg" alt="">
-          </div>
-          <div class="item">
-            <img src="images/pmp-3.jpg" alt="">
-          </div>
-
-          <div class="item">
-            <img src="images/pmp-4.jpg" alt="">
-          </div>
-
-        </div>
-        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-          <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-          <span class="icon-next"></span>
-        </a>
-      </div>
-
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
+	<? include "engine/modals.inc.htm"; ?>
 
 	</body>
 </html>
