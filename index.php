@@ -2,10 +2,11 @@
 <html>
     <head>
         <title>Webscapes</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <meta charset="utf-8">
 
         <meta name="description" content="" />
-        <meta name="keywords" content="разрабока сайтов, front end, оренбург" />
+        <meta name="keywords" content="разрабока сайтов, ui, front end, оренбург" />
 
         <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
 
@@ -61,6 +62,7 @@
 
 
         <!-- Nav -->
+
             <nav id="nav">
                 <ul>
                     <li><a href="#top"><i style="text-decoration: none" class="icon-long-arrow-up"></i></a></li>
@@ -70,6 +72,7 @@
             </nav>
 
         <!-- Home -->
+
             <div class="wrapper wrapper-style1 wrapper-first" style="height: 670px">
             <div id="header-bg"></div>
                 <article class="container" id="top">
@@ -93,6 +96,7 @@
             </div>
 
         <!-- Portfolio -->
+
             <div class="wrapper wrapper-style3 wrapper-shadow">
 
                 <article id="work">
@@ -166,8 +170,35 @@
                     </div>
 
                     <div class="era p12">
+
                         <div class="point y12">2012</div>
                         <div class="point-frame"></div>
+
+                        <li>
+                            <figure>
+                                <div><img src="images/works/pdt.png" alt="img02"></div>
+                                <figcaption>
+                                    <h3>Пыль да Таун.</h3>
+                                    <span>Видеосъемка, монтаж.</span>
+
+                                    <a data-toggle="modal" href="#pdt-1" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
+                                </figcaption>
+                            </figure>
+                        </li>
+
+
+                        <li>
+                            <figure>
+                                <div><img src="images/works/nachalo.png" alt="img02"></div>
+                                <figcaption>
+                                    <h3>Малай - Начало.</h3>
+                                    <span>Видеосъемка, монтаж.</span>
+
+                                    <a data-toggle="modal" href="#malay" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
+                                </figcaption>
+                            </figure>
+                        </li>
+
                         <li>
                             <figure>
 
@@ -219,30 +250,6 @@
                             </figure>
                         </li>
 
-                        <li>
-                            <figure>
-                                <div><img src="images/works/pdt.png" alt="img02"></div>
-                                <figcaption>
-                                    <h3>Пыль да Таун.</h3>
-                                    <span>Видеосъемка, монтаж.</span>
-
-                                    <a data-toggle="modal" href="#pdt-1" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-
-                        <li>
-                            <figure>
-                                <div><img src="images/works/nachalo.png" alt="img02"></div>
-                                <figcaption>
-                                    <h3>Малай - Начало.</h3>
-                                    <span>Видеосъемка, монтаж.</span>
-
-                                    <a data-toggle="modal" href="#malay" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
-                                </figcaption>
-                            </figure>
-                        </li>
                     </div>
 
                     <div class="era p11">
@@ -337,6 +344,18 @@
             </div>
 
     <? include "engine/modals.inc.htm"; ?>
+
+    <script>
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-42994394-1', 'webscapes.ru');
+      ga('send', 'pageview');
+
+    </script>
 
     </body>
 </html>

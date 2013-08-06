@@ -61,53 +61,15 @@ $(function () {
        position: 'bottom', theme: '.tooltipster-punk', maxWidth: 260, trigger: 'click' });
   $('.tt-warning').tooltipster('disable');
 
-    $('.get-down').tooltipster({
-       animation: 'grow',
-       content:
-       'Посмотреть портфолио',
-       position: 'bottom', theme: '.tooltipster-punk', maxWidth: 260,
-        iconTheme: '.icon-cog',});
-
-    $('.tt-dev').tooltipster({
-   animation: 'grow',
-   arrow: true,
-   arrowColor: '',
-   content: 'Посмотреть в живую.',
-   delay: 200,
-   fixedWidth: 0,
-   maxWidth: 0,
-   functionBefore: function(origin, continueTooltip) {
-      continueTooltip();
-   },
-   functionReady: function(origin, tooltip) {},
-   functionAfter: function(origin) {},
-   icon: '(?)',
-   iconDesktop: false,
-   iconTouch: false,
-   iconTheme: '.tooltipster-icon',
-   interactive: false,
-   interactiveTolerance: 350,
-   offsetX: 0,
-   offsetY: 0,
-   onlyOne: true,
-   position: 'bottom',
-   speed: 350,
-   timer: 0,
-   theme: '.tooltipster-punk',
-   touchDevices: true,
-   trigger: 'hover',
-   updateAnimation: true
-});
-
 
     $('.get-down').hover(function () {
         $('i', this).transition({color: 'rgba(0,0,0,0.4)'});
-        $(this).transition({ y: '-15px',
+        $(this).transition({ y: '-10px',
             backgroundColor: 'rgba(0,0,0,0.2)', boxShadow: '0px 8px 16px rgba(0,0,0,0.5)'
         });
     }, function () {
         $('i', this).transition({color: 'rgba(0,0,0,0.2)'});
-        $(this).transition({ y: '15px',
+        $(this).transition({ y: '10px',
             backgroundColor: 'rgba(0,0,0,0.1)', boxShadow: '0px 4px 8px rgba(0,0,0,0.4)'
         });
     });
