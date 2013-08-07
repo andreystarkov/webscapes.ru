@@ -111,7 +111,7 @@ $(function () {
               });
           } else {
             $('.btn-hide', obj).transition({
-                    opacity: 1,
+                    opacity: 1
 
               });
           }
@@ -244,12 +244,28 @@ $(function () {
 
     });
 
-    $('.btn-hide').tooltipster({
+ /*   $('.btn-hide').tooltipster({
        animation: 'swing',
        content:  'Свернуть этот период.',
        position: 'bottom', theme: '.tooltipster-punk', maxWidth: 260, trigger: 'hover'
      });
+ */
+    var isNav = 0;
+  /*
+    $(window).scroll(function(){
 
+     if(($('body').scrollTop() >= 670) && (isNav == 0)  ){
+
+       $('nav').fadeToggle();
+       isNav = 1;
+
+    }
+     if(($('body').scrollTop() <= 600) && (isNav == 1)){
+      $('nav').stop().fadeToggle();
+      isNav = 0;
+     }
+    });
+ */
     $('.btn-hide').click(function(){
 
         var target = $(this).parent();

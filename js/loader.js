@@ -198,6 +198,9 @@
         }).appendTo(qLparent);
         qLbar = $("<div id='qLbar'></div>").css({
             height: "100px",
+            "border-top-right-radius": "50px",
+            "border-bottom-right-radius": "50px",
+            "box-shadow": "0 0 150px rgba(0,0,0,0.5)",
             backgroundColor: qLoptions.barColor,
             width: "0%",
             opacity: '0.1',
