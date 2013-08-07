@@ -5,7 +5,7 @@
 .message { position: absolute; top: -100%;  background: rgba(0,0,0,0.4); border-radius: 8px; padding: 20px 30px;
   font-family: 'Open Sans Condensed'; font-weight: 800; font-size: 52px; color: #f1ece6; text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
   box-shadow: 0 8px 15px rgba(0,0,0,0.8); z-index: 666; }
-
+  .get-down { overflow: visible !important;}
   .btn-flat-black
   {
     position: relative;
