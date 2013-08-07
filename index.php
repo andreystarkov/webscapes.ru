@@ -132,6 +132,19 @@
                         <li>
 
                             <figure>
+                                <div><img src="images/works/am.png" alt="img06"></div>
+                                <figcaption>
+                                    <h3>&#171;Awesome Music&#187;</h3>
+                                    <span>Разработка логотипа.</span>
+                                    <a data-toggle="modal" href="#mt-klimat" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
+                                <!-- <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; background: #66837b;"></div> -->
+                                </figcaption>
+                            </figure>
+                        </li>
+
+                        <li>
+
+                            <figure>
                                 <div><img src="images/works/6.png" alt="img06"></div>
                                 <figcaption>
                                     <h3>&#171;Монтаж Климат&#187;</h3>

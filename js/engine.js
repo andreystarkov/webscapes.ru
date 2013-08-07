@@ -1,5 +1,56 @@
 $(function () {
 
+function eraHide(obj){
+
+        $('.timeline').fadeToggle();
+
+        $('.point-frame', obj).transition({
+            opacity: 0,
+            x: '50px'
+        });
+
+        $('.point', obj).transition({
+            y: '30px',
+            color: 'rgba(229,222,215,0.5);',
+            borderBottomColor: 'rgba(229,222,215,0.2);',
+            backgroundColor: 'transparent',
+            boxShadow: '0 1px 3px rgba(0,0,0,0)'
+        });
+
+        $(obj).animate({
+            backgroundColor: 'transparent',
+            color: 'rgba(146,47,49,0.2)',
+            boxShadow: '0 3px 6px rgba(0,0,0,0.0)',
+            borderLeftColor: 'transparent'
+        });
+}
+
+function eraShow(obj){
+
+        $('.timeline').fadeToggle();
+        $('.point-frame', obj).transition({
+                opacity: 1,
+                x: '-50px'
+        });
+
+        $('.point', obj).transition({
+            backgroundColor: '#cbc3ba',
+            borderBottomColor: '#b16e52',
+            y: '-30px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
+            color: '#111'
+        }, function () {
+
+        });
+
+        $(obj).animate({
+            backgroundColor: '#c4b7ab',
+            boxShadow: '1px 4px 16px rgba(0,0,0,0.3)',
+            borderLeftColor: '#b16e52',
+        });
+
+}
+
   if($.cookie('sent') == '1'){
       $('#button-send').html('<i class="icon-ok-circle icon-large"></i> Ваша заявка принята');
       $('#button-send').animate({color: 'rgba(255,255,255,1)'});
@@ -49,6 +100,8 @@ $(function () {
 
   });
 
+    $('.tt').tooltipster({animation: 'swing'});
+
     $('.tt-sent').tooltipster({
        animation: 'grow',
        content:  '<i class="icon-ok-circle tt-ico icon-4x"></i><span class="tt-txt">Спасибо за обращение! Ваша заявка была отправлена. Мы свяжемся с вами, удобным для Вас способом в кратчайшие сроки.</span>',
@@ -91,52 +144,11 @@ $(function () {
         });
     });
 
+
     $('.era').hover(function () {
-
-        $('.timeline').fadeToggle();
-        $('.point-frame', this).transition({
-                opacity: 1,
-                x: '-50px'
-            });
-
-        $('.point', this).transition({
-            backgroundColor: '#cbc3ba',
-            borderBottomColor: '#b16e52',
-            y: '-30px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
-            color: '#111'
-        }, function () {
-
-        });
-
-        $(this).animate({
-            backgroundColor: '#c4b7ab',
-            boxShadow: '1px 4px 16px rgba(0,0,0,0.3)',
-            borderLeftColor: '#b16e52',
-        });
-
+        eraShow($(this));
     }, function () {
-
-        $('.timeline').fadeToggle();
-
-        $('.point-frame', this).transition({
-            opacity: 0,
-            x: '50px'
-        });
-
-        $('.point', this).transition({
-            y: '30px',
-            color: 'rgba(229,222,215,0.5);',
-            borderBottomColor: 'rgba(229,222,215,0.2);',
-            backgroundColor: 'transparent',
-            boxShadow: '0 1px 3px rgba(0,0,0,0)'
-        });
-
-        $(this).animate({
-            backgroundColor: 'transparent',
-            color: 'rgba(146,47,49,0.2)',
-            boxShadow: '0 3px 6px rgba(0,0,0,0.0)',
-            borderLeftColor: 'transparent'
-        });
+        eraHide($(this));
     });
+
 });
