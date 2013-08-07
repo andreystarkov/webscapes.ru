@@ -56,6 +56,7 @@
         .mve .modal-content .icon-off { margin-left: 5px; }
         .mve .modal-content i { transition: all 1s ease; text-shadow: 0px 3px 6px rgba(0,0,0,0.7);}
         .btn-shut { margin-top: 10px; background: rgba(71,65,59, 0.1); color: rgba(225,215,206,0.5); text-shadow: 0px 3px 8px rgba(0,0,0,0.1);  }
+        .wrapper, .modal, article { overflow: hidden; }
         </style>
     </head>
     <body>

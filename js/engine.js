@@ -25,6 +25,7 @@ function eraHide(obj){
         });
 }
 
+
 function eraShow(obj){
 
         $('.timeline').fadeToggle();
@@ -57,7 +58,10 @@ function eraShow(obj){
       $('#button-send').animate({backgroundColor: '#93cb5d', borderBottomColor: '#618d37', boxShadow: 'inset 0px 0px 0px 1px #618d37, inset 0px 2px 1px 0px rgba(255,255,255,0.75)', color: 'rgba(255,255,255,0)'});
     }
 
-
+$('.pf-btn').click(function(){
+  $(ocument.body).css({'overflow-y': 'scroll'});
+  console.log('sa');
+});
 
   $('#button-send').click( function(){
     var name = $('#name').val();

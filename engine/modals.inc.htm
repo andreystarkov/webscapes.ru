@@ -4,7 +4,13 @@
       $('.carousel').carousel();
       var pdtPlay = videojs("pdt-video");
 
+      $(".mve").on("show", function () {
+        $("body").addClass("modal-open");
+      }).on("hidden", function () {
+        $("body").removeClass("modal-open")
+      });
       $('.mve').on('hidden.bs.modal', function () {
+        $('body').css({'overflow-y': 'auto'});
         pdtPlay.pause();
       });
     });

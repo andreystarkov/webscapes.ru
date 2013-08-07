@@ -3470,7 +3470,7 @@ button.close {
 }
 
 .modal-open {
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .modal {
