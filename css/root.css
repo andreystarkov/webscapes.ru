@@ -1,7 +1,6 @@
-body { overflow-x: hidden; }
+body { overflow-x: hidden; background-color: ##4d4741;}
 
-
-#header-bg { position: absolute; top: 25px; left: 0px; width: 100%; height: 670px; background: url(../images/bg-1.jpg) left top no-repeat !important; }
+#header-bg { position: absolute; top: 25px; left: 0px; width: 100%; height: 660px; background: url(../images/bg-1.jpg) left top no-repeat !important; }
 
 .message { position: absolute; top: -100%; background: rgba(0,0,0,0.4); border-radius: 8px; padding: 20px 30px; font-family: 'Open Sans Condensed'; font-weight: 800; font-size: 52px; color: #f1ece6; text-shadow: 1px 1px 1px rgba(0,0,0,0.5); box-shadow: 0 8px 15px rgba(0,0,0,0.8); z-index: 666; }
 
@@ -53,3 +52,28 @@ body { overflow-x: hidden; }
 .timeline .y13 { top: 140px; }
 .timeline .y12 { top: 500px; }
 .timeline .y11 { top: 820px; }
+
+    .modal-pics { width: 931px; margin-left: -40px;}
+    .modal-video { width: 960px;}
+
+.tt-ico { color: #2c2927; text-shadow: 0 2px 6px rgba(0,0,0,0.1); padding-top: 12px; padding-left: 10px; padding-right: 10px; float: left; position: relative }
+.tt-txt { padding-top: 5px;  padding-bottom: 10px; float: left; position: relative; padding-left: 15px; width: 350px; padding-right: 10px }
+
+.not-ready { padding-top: 25px; }
+.not-ready i { color: #333333; font-size: 92px; }
+
+.pf-slider { width: 931px; height: 733px; }
+.modal { top: 10% !important; left: -250px !important; }
+.mve .modal-content { padding:0px; width: 960px; padding-bottom: 10px; background: #34302c; /* #c4b7ab */ }
+.mve .modal-content .icon-off { margin-left: 5px; }
+.mve .modal-content i { transition: all 1s ease; text-shadow: 0px 3px 6px rgba(0,0,0,0.7);}
+.btn-shut { margin-top: 10px; background: rgba(71,65,59, 0.1); color: rgba(225,215,206,0.5); text-shadow: 0px 3px 8px rgba(0,0,0,0.1);  }
+
+/* preloader */
+
+.qoverlay { background-color: #000000; z-index: 9999; }
+.qloader { background-color: #CCCCCC; }
+.qamt { color:#333333; font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
+font-size:40px; font-weight:bold; line-height:50px; height:50px; width:100px; margin:-60px 0 0 -50px; }
+
+

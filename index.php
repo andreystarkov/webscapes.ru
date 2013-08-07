@@ -10,6 +10,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
 
+        <link rel="icon" type="image/png" href="/images/favicon.png" />
         <script src="js/modernizr.custom.js"></script>
 
         <link rel="stylesheet" type="text/css"  href="css/root.css" />
@@ -36,6 +37,8 @@
         <link href="http://vjs.zencdn.net/4.1/video-js.css" rel="stylesheet">
         <script src="http://vjs.zencdn.net/4.1/video.js"></script>
 
+        <script src="js/loader.js"></script>
+
         <script src="js/engine.js"></script>
 
         <!--[if IE 7]>
@@ -50,16 +53,7 @@
         <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
         <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
         <!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
-        <style>
-        body { background-color: ##4d4741 !important;}
-        .pf-slider { width: 931px; height: 733px; }
-        .modal { top: 10% !important; left: -250px !important; }
-        .mve .modal-content { padding:0px; width: 960px; padding-bottom: 10px; background: #34302c; /* #c4b7ab */ }
-        .mve .modal-content .icon-off { margin-left: 5px; }
-        .mve .modal-content i { transition: all 1s ease; text-shadow: 0px 3px 6px rgba(0,0,0,0.7);}
-        .btn-shut { margin-top: 10px; background: rgba(71,65,59, 0.1); color: rgba(225,215,206,0.5); text-shadow: 0px 3px 8px rgba(0,0,0,0.1);  }
 
-        </style>
     </head>
     <body>
 
@@ -69,8 +63,8 @@
             <nav id="nav">
                 <ul>
                     <li><a href="#top"><i style="text-decoration: none" class="icon-long-arrow-up"></i></a></li>
-                    <li><a href="#work">Портфолио</a></li>
-                    <li><a href="#contact">Связаться с нами</a></li>
+                    <li><a href="#work">История</a></li>
+                    <li><a href="#contact">Связаться онлайн</a></li>
                 </ul>
             </nav>
 

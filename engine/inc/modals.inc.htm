@@ -1,33 +1,24 @@
     <!-- Portfolio modals -->
 
-    <script>
+  <script>
     $(function () {
-      $('.carousel').carousel();
-      var pdtPlay = videojs("pdt-video");
 
-      $(".mve").on("show", function () {
-        $("body").addClass("modal-open");
-      }).on("hidden", function () {
-        $("body").removeClass("modal-open")
-      });
-      $('.mve').on('hidden.bs.modal', function () {
-        $('body').css({'overflow-y': 'auto'});
-        pdtPlay.pause();
-      });
+        $('.carousel').carousel();
+        var pdtPlay = videojs("pdt-video");
+
+        $(".mve").on("show", function () {
+          $("body").addClass("modal-open");
+        }).on("hidden", function () {
+          $("body").removeClass("modal-open")
+        });
+
+        $('.mve').on('hidden.bs.modal', function () {
+          $('body').css({'overflow-y': 'auto'});
+          pdtPlay.pause();
+        });
+
     });
-    </script>
-
-    <style>
-    .modal-pics { width: 931px; margin-left: -40px;}
-    .modal-video { width: 960px;}
-
-    .tt-ico { color: #2c2927; text-shadow: 0 2px 6px rgba(0,0,0,0.1); padding-top: 12px; padding-left: 10px; padding-right: 10px; float: left; position: relative }
-    .tt-txt { padding-top: 5px;  padding-bottom: 10px; float: left; position: relative; padding-left: 15px; width: 350px; padding-right: 10px }
-    body { overflow-x: hidden;}
-    .not-ready { padding-top: 25px; }
-    .not-ready i { color: #333333; font-size: 92px;}
-
-    </style>
+  </script>
 
   <!-- Пыль да таун -->
 

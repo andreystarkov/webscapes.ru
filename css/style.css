@@ -533,6 +533,7 @@
 
 		#nav a
 		{
+			font-family: 'Open Sans';
 			position: relative;
 			display: block;
 			color: #e5ded7 !important;

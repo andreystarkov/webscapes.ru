@@ -54,6 +54,20 @@ function eraShow(obj){
         });
 
 }
+/*
+$('.point').click( function(){
+  $(this).parent('.era').slideToggle();
+});
+*/
+
+    $("body").queryLoader2({
+        barColor: "#b16e52",
+        backgroundColor: "#2c2a27",
+        percentage: false,
+
+        completeAnimation: "fade",
+        minimumTime: 100
+    });
 
   if($.cookie('sent') == '1'){
       $('#button-send').html('<i class="icon-ok-circle icon-large"></i> Ваша заявка принята');
@@ -155,7 +169,6 @@ $('.not-ready').click( function(){
 
         });
     });
-
 
     $('.era').hover(function () {
         eraShow($(this));
