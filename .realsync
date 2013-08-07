@@ -21,6 +21,7 @@ exclude = ~*
 exclude = *.tmp
 exclude = *.pyc
 exclude = *.swp
+exclude = *.psd
 exclude = .git
 exclude = CVS
 exclude = .svn

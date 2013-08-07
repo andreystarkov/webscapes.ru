@@ -16,6 +16,8 @@ local.properties
 .settings/
 .loadpath
 
+_gfx/
+
 # External tool builders
 .externalToolBuilders/
 
