@@ -1,3 +1,6 @@
+/* Webscapes.ru
+   im@andreystarkov.ru */
+
 $(function () {
 
 function eraHide(obj){
@@ -58,10 +61,15 @@ function eraShow(obj){
       $('#button-send').animate({backgroundColor: '#93cb5d', borderBottomColor: '#618d37', boxShadow: 'inset 0px 0px 0px 1px #618d37, inset 0px 2px 1px 0px rgba(255,255,255,0.75)', color: 'rgba(255,255,255,0)'});
     }
 
-$('.pf-btn').click(function(){
-  $(ocument.body).css({'overflow-y': 'scroll'});
-  console.log('sa');
+$('.not-ready').click( function(){
+  $('i', this).animate({color: '#7b8289', boxShadow: 'rgba(0,0,0,0.3)'}, 500, function(){
+     $('i', this).delay(300).animate({color: '#333', boxShadow: 'rgba(0,0,0,0)'});
+  });
 });
+ $('.not-ready').tooltipster({
+       animation: 'grow',
+       content:  'Информация по проеку в разработке.</span>',
+       position: 'bottom', theme: '.tooltipster-punk', maxWidth: 310, trigger: 'hover' });
 
   $('#button-send').click( function(){
     var name = $('#name').val();

@@ -1,3 +1,4 @@
+    <!-- Portfolio modals -->
 
     <script>
     $(function () {
@@ -16,11 +17,23 @@
     });
     </script>
 
+    <style>
+    .modal-pics { width: 931px; margin-left: -40px;}
+    .modal-video { width: 960px;}
+
+    .tt-ico { color: #2c2927; text-shadow: 0 2px 6px rgba(0,0,0,0.1); padding-top: 12px; padding-left: 10px; padding-right: 10px; float: left; position: relative }
+    .tt-txt { padding-top: 5px;  padding-bottom: 10px; float: left; position: relative; padding-left: 15px; width: 350px; padding-right: 10px }
+    body { overflow-x: hidden;}
+    .not-ready { padding-top: 25px; }
+    .not-ready i { color: #333333; font-size: 92px;}
+
+    </style>
+
   <!-- Пыль да таун -->
 
   <div class="modal fade mve" id="pdt-1">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content modal-video">
         <video id="pdt-video" style="margin-left: -1px; margin-top: -2px" class="video-js vjs-default-skin"
         controls preload="auto" width="960" height="540" poster="images/pdt-prev.jpg">
              <source src="video/pdt.mp4" type='video/mp4' />
@@ -29,7 +42,7 @@
           <button type="button" class="btn btn-shut" data-dismiss="modal"><i class="icon-off icon-3x"></i> </button>
           <button type="button" class="btn btn-shut"><i class="icon-thumbs-up icon-3x"></i> </button>
 
-      </div><!-- /.modal-content -->
+      </div><!-- /.modal-content modal-pics -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
@@ -37,7 +50,7 @@
 
   <div class="modal fade mve" id="malay">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content modal-video">
         <video id="pdt-video" style="margin-left: -1px; margin-top: -2px" class="video-js vjs-default-skin"
         controls preload="auto" width="960" height="540" poster="images/malay-prev.jpg">
              <source src="video/m-nachalo.mp4" type='video/mp4' />
@@ -47,7 +60,7 @@
           <button type="button" class="btn btn-shut"><i class="icon-heart icon-3x"></i> </button>
           <button type="button" class="btn btn-shut"><i class="icon-youtube-play icon-3x"></i> </button>
 
-      </div><!-- /.modal-content -->
+      </div><!-- /.modal-content modal-pics -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
@@ -55,14 +68,15 @@
 
   <div class="modal fade" id="pmp-1">
     <div class="modal-dialog">
-      <div class="modal-content" style="height: 730px; width: 925px;">
+      <div class="modal-content modal-pics">
 
-     <div id="carousel-pmp" class="carousel slide bs-docs-carousel-example">
+     <div id="carousel-pmp" class="carousel slide pf-slider">
 
         <div class="carousel-inner">
           <div class="item active">
             <img src="images/pmp-1.jpg" alt="">
           </div>
+
           <div class="item">
             <img src="images/pmp-2.jpg" alt="">
           </div>
@@ -83,7 +97,7 @@
         </a>
       </div>
 
-      </div><!-- /.modal-content -->
+      </div><!-- /.modal-content modal-pics -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
@@ -91,9 +105,9 @@
 
   <div class="modal fade" id="kruzhka">
     <div class="modal-dialog">
-      <div class="modal-content" style="height: 730px; width: 925px;">
+      <div class="modal-content modal-pics">
 
-     <div id="carousel-kr" class="carousel slide bs-docs-carousel-example">
+     <div id="carousel-kr" class="carousel slide pf-slider">
 
         <div class="carousel-inner">
           <div class="item active">
@@ -115,7 +129,7 @@
         </a>
       </div>
 
-      </div><!-- /.modal-content -->
+      </div><!-- /.modal-content modal-pics -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
@@ -123,9 +137,9 @@
 
   <div class="modal fade" id="mt-klimat">
     <div class="modal-dialog">
-      <div class="modal-content" style="height: 730px; width: 925px;">
+      <div class="modal-content modal-pics" style="height: 931px; height: 733px;">
 
-     <div id="carousel-mt" class="carousel slide bs-docs-carousel-example">
+     <div id="carousel-mt" class="carousel slide pf-slider">
 
         <div class="carousel-inner">
 
@@ -154,6 +168,6 @@
         </a>
       </div>
 
-      </div><!-- /.modal-content -->
+      </div><!-- /.modal-content modal-pics -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
