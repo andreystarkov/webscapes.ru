@@ -108,45 +108,11 @@
                     <div class="timeline">
 
                     </div>
+
                     <ul class="pf-grid">
 
-                    <div class="era p13">
-                        <div class="point y13">2013</div>
-                        <div class="point-frame"></div>
+                        <? include "backend/content/pf-icons.inc.htm"; ?>
 
-                        <? include "engine/inc/pf-icons.inc.html"; ?>
-
-                    </div>
-
-                    <div class="era p11">
-                        <div class="point y13">2011</div>
-                        <div class="point-frame"></div>
-
-                        <li>
-                            <figure>
-                                <div><img src="images/works/3.png" alt="img03"></div>
-                                <figcaption>
-                                    <h3>ОГИМ Абитуриент</h3>
-                                    <span>Дизайн, разработка.</span>
-
-                                    <a href="http://www.ogim.ru/abiturient" target="_blank" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-
-                        <li>
-                            <figure>
-                                <div><img src="images/works/trotuar.png" alt="img03"></div>
-                                <figcaption>
-                                    <h3>ОазисСтройДекор</h3>
-                                    <span>Разработка, фотография.</span>
-
-                                    <a href="http://www.trotuar56.ru" target="_blank" class="pf-btn-about tt-dev pf-big"><div class="bt-cross"></div></a>
-                                </figcaption>
-                            </figure>
-                        </li>
-                     </div>
                     </ul>
 
                 </div>
@@ -209,7 +175,7 @@
                 </article>
             </div>
 
-    <? include "engine/inc/modals.inc.htm"; ?>
+    <? include "backend/content/modals.inc.htm"; ?>
 
     <script>
 

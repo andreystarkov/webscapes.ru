@@ -1,19 +1,18 @@
-/*
- * QueryLoader v2 - A simple script to create a preloader for images
- *
- * For instructions read the original post:
- * http://www.gayadesign.com/diy/queryloader2-preload-your-images-with-ease/
- *
- * Copyright (c) 2011 - Gaya Kessler
- *
- * Licensed under the MIT license:
- *   http://www.opensource.org/licenses/mit-license.php
- *
- * Version:  2.3
- * Last update: 13-06-2013
- *
- */
+
+    /*
+     * QueryLoader v2 - A simple script to create a preloader for images
+     *
+     * Copyright (c) 2011 - Gaya Kessler
+     *
+     * Fork by Andrey Starkov based on 2.3, (c) 2013 (https://github.com/andreystarkov)
+     *
+     */
+
 (function($) {
+    function roundFloat(num,decimals){
+        return Math.round(num*Math.pow(10,decimals))/Math.pow(10,decimals);
+    }
+
 	/*Browser detection patch*/
 	jQuery.browser = {};
 	jQuery.browser.mozilla = /mozilla/.test(navigator.userAgent.toLowerCase()) && !/webkit/.test(navigator.userAgent.toLowerCase());
@@ -64,6 +63,8 @@
         completeAnimation: "fade",
         minimumTime: 500,
         onLoadComplete: function () {
+             overlay =  $('#'+qLoptions.overlayId);
+
             if (qLoptions.completeAnimation == "grow") {
                 var animationTime = 500;
                 var currentTime = new Date();
@@ -72,19 +73,23 @@
                 }
 
                 $(qLbar).stop().animate({
-                    "width": "100%"
-                }, animationTime, function () {
-                    $(this).animate({
-                        top: "0%",
-                        width: "100%",
-                        height: "100%"
-                    }, 500, function () {
-                        $('#'+qLoptions.overlayId).fadeOut(500, function () {
-                            $(this).remove();
-                            qLoptions.onComplete();
-                        })
-                    });
-                });
+                    "width": "100px",
+                    "height": "100px",
+                     minHeight: '100px',
+                     minWidth: '100px',
+                    "left": "50%",
+                    "margin-left": '-45px',
+                     borderRadius: '50px'
+                }, animationTime, function(){
+                            $('#'+qLoptions.overlayId).fadeOut(500, function () {
+                                $('.get-down').animate({opacity:1}, 1000);
+                                $(this).remove();
+                                qLoptions.onComplete();
+                            });
+                        });
+
+
+
             } else {
                 $('#'+qLoptions.overlayId).fadeOut(500, function () {
                     $('#'+qLoptions.overlayId).remove();
@@ -149,9 +154,12 @@
     var completeImageLoading = function () {
         qLdone++;
 
+    // Bar animation starts
+
         var percentage = (qLdone / qLimageCounter) * 100;
         $(qLbar).stop().animate({
             width: percentage + "%",
+            opacity: roundFloat(percentage/100,1),
             minWidth: percentage + "%"
         }, 200);
 
@@ -189,11 +197,12 @@
             left: 0
         }).appendTo(qLparent);
         qLbar = $("<div id='qLbar'></div>").css({
-            height: "660px",
+            height: "100px",
             backgroundColor: qLoptions.barColor,
             width: "0%",
+            opacity: '0.1',
             position: "absolute",
-            top: "0"
+            top: "485px"
         }).appendTo(qLoverlay);
         if (qLoptions.percentage == true) {
             qLpercentage = $("<div id='qLpercentage'></div>").text("0%").css({

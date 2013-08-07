@@ -1,85 +1,153 @@
-/* Webscapes.ru
-   im@andreystarkov.ru */
+    /* Webscapes.ru
+       im@andreystarkov.ru */
 
 $(function () {
 
-function eraHide(obj){
-
-        $('.timeline').fadeToggle();
-
-        $('.point-frame', obj).transition({
-            opacity: 0,
-            x: '50px'
-        });
-
-        $('.point', obj).transition({
-            y: '30px',
-            color: 'rgba(229,222,215,0.5);',
-            borderBottomColor: 'rgba(229,222,215,0.2);',
-            backgroundColor: 'transparent',
-            boxShadow: '0 1px 3px rgba(0,0,0,0)'
-        });
-
-        $(obj).animate({
-            backgroundColor: 'transparent',
-            color: 'rgba(146,47,49,0.2)',
-            boxShadow: '0 3px 6px rgba(0,0,0,0.0)',
-            borderLeftColor: 'transparent'
-        });
-}
-
-
-function eraShow(obj){
-
-        $('.timeline').fadeToggle();
-        $('.point-frame', obj).transition({
-                opacity: 1,
-                x: '-50px'
-        });
-
-        $('.point', obj).transition({
-            backgroundColor: '#cbc3ba',
-            borderBottomColor: '#b16e52',
-            y: '-30px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
-            color: '#111'
-        }, function () {
-
-        });
-
-        $(obj).animate({
-            backgroundColor: '#c4b7ab',
-            boxShadow: '1px 4px 16px rgba(0,0,0,0.3)',
-            borderLeftColor: '#b16e52',
-        });
-
-}
-/*
-$('.point').click( function(){
-  $(this).parent('.era').slideToggle();
-});
-*/
-
     $("body").queryLoader2({
-        barColor: "#b16e52",
+        barColor: "#8c604c",
         backgroundColor: "#2c2a27",
         percentage: false,
 
-        completeAnimation: "fade",
+        completeAnimation: "grow",
         minimumTime: 100
     });
 
-  if($.cookie('sent') == '1'){
-      $('#button-send').html('<i class="icon-ok-circle icon-large"></i> Ваша заявка принята');
-      $('#button-send').animate({color: 'rgba(255,255,255,1)'});
-      $('#button-send').animate({backgroundColor: '#93cb5d', borderBottomColor: '#618d37', boxShadow: 'inset 0px 0px 0px 1px #618d37, inset 0px 2px 1px 0px rgba(255,255,255,0.75)', color: 'rgba(255,255,255,0)'});
+    function eraHide(obj){
+
+      if( (obj.hasClass('on')) ){
+
+            $('.timeline').fadeToggle();
+
+            obj.removeClass('on').addClass('off');
+
+            $('.point-frame', obj).transition({
+                opacity: 0,
+                x: '50px'
+            });
+
+        if( (obj.hasClass('collapsed')) ) {
+
+            $('.btn-hide', obj).transition({
+                  opacity: 0.5,
+                  boxShadow: '0 0 0 rgba(0,0,0,0)',
+                  color: '#111'
+            });
+
+            $(obj).animate({
+                backgroundColor: 'rgba(255,255,255,0.05)',
+                color: 'rgba(146,47,49,0.2)',
+                boxShadow: '0 3px 6px rgba(0,0,0,0.0)',
+                borderLeftColor: 'transparent'
+            });
+
+            $('.point', obj).transition({
+                color: 'rgba(229,222,215,0.5)',
+                borderBottomColor: 'rgba(229,222,215,0.05);',
+                backgroundColor: 'transparent',
+                boxShadow: '0 1px 3px rgba(0,0,0,0)'
+               });
+
+        } else {
+
+            $('.point', obj).transition({
+                y: '30px',
+                color: 'rgba(229,222,215,0.5)',
+                borderBottomColor: 'rgba(229,222,215,0.2);',
+                backgroundColor: 'transparent',
+                boxShadow: '0 1px 3px rgba(0,0,0,0)'
+               });
+
+             $('.btn-hide', obj).transition({
+                  opacity: 0,
+                  backgroundColor: 'transparent',
+                  borderBottomColor: 'transparent',
+                  y: '0px',
+                  boxShadow: '0 0 0 rgba(0,0,0,0)',
+                  color: '#111'
+            });
+
+
+
+            $(obj).animate({
+                backgroundColor: 'transparent',
+                color: 'rgba(146,47,49,0.2)',
+                boxShadow: '0 3px 6px rgba(0,0,0,0.0)',
+                borderLeftColor: 'transparent'
+            });
+        }
+
+
+
+
+        }
+
     }
 
-$('.not-ready').click( function(){
-  $('i', this).animate({color: '#7b8289', boxShadow: 'rgba(0,0,0,0.3)'}, 500, function(){
-     $('i', this).delay(300).animate({color: '#333', boxShadow: 'rgba(0,0,0,0)'});
-  });
-});
+    function eraShow(obj){
+
+      if( !(obj.hasClass('on')) ){
+
+            $('.era').addClass('off');
+
+            obj.removeClass('off').addClass('on');
+
+            eraHide($('.off'));
+
+            $('.timeline').fadeToggle();
+
+            $('.point-frame', obj).transition({
+                    opacity: 1,
+                    x: '-50px'
+            });
+
+          if( !(obj.hasClass('collapsed')) ) {
+              $('.btn-hide', obj).transition({
+                    opacity: 1,
+                    backgroundColor: '#cbc3ba',
+                    borderBottomColor: '#b16e52',
+                    y: '100px',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
+                    color: '#111'
+              });
+          } else {
+            $('.btn-hide', obj).transition({
+                    opacity: 1,
+
+              });
+          }
+
+            $('.point', obj).transition({
+                backgroundColor: '#cbc3ba',
+                borderBottomColor: '#b16e52',
+                y: '-30px',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
+                color: '#111'
+            }, function () {
+
+            });
+
+
+            $(obj).animate({
+                backgroundColor: '#c4b7ab',
+                boxShadow: '1px 4px 16px rgba(0,0,0,0.3)',
+                borderLeftColor: '#b16e52',
+            });
+      }
+    }
+
+
+    if($.cookie('sent') == '1'){
+        $('#button-send').html('<i class="icon-ok-circle icon-large"></i> Ваша заявка принята');
+        $('#button-send').animate({color: 'rgba(255,255,255,1)'});
+        $('#button-send').animate({backgroundColor: '#93cb5d', borderBottomColor: '#618d37', boxShadow: 'inset 0px 0px 0px 1px #618d37, inset 0px 2px 1px 0px rgba(255,255,255,0.75)', color: 'rgba(255,255,255,0)'});
+    }
+
+    $('.not-ready').click( function(){
+      $('i', this).transition({rotate: '+360deg', color: '#b85638', textShadow: '0 0 0 rgba(0,0,0,0.4)'}, 500, function(){
+         $(this).animate({color: '#333', textShadow: '0px 2px 6px rgba(0,0,0,0.1)'});
+      });
+    });
+
  $('.not-ready').tooltipster({
        animation: 'grow',
        content:  'Информация по проеку в разработке.</span>',
@@ -171,9 +239,55 @@ $('.not-ready').click( function(){
     });
 
     $('.era').hover(function () {
+
         eraShow($(this));
-    }, function () {
-        eraHide($(this));
+
+    });
+
+    $('.btn-hide').tooltipster({
+       animation: 'swing',
+       content:  'Свернуть этот период.',
+       position: 'bottom', theme: '.tooltipster-punk', maxWidth: 260, trigger: 'hover'
+     });
+
+    $('.btn-hide').click(function(){
+
+        var target = $(this).parent();
+
+        if( !(target.hasClass('collapsed')) ){
+            target.addClass('collapsed');
+
+            $('i', this).removeClass().addClass('tgl');
+
+            $(this).transition({width: '50px', height: '35px', y: '70px'}, function(){
+              $('.tgl').addClass('icon-angle-down');
+              $('.point', target).fadeTo(0.5, 500);
+            });
+
+            $('figure', target).fadeToggle();
+            target.transition({minHeight: '120px', height: '120px'}, function(){
+            });
+
+
+        } else {
+
+            $('.point', target).fadeTo(1, 500);
+
+            $('i', target).removeClass();
+
+            target.transition({minHeight: '400px', height: 'auto'}, function(){
+                 $('figure', target).fadeToggle();
+                 $(this).removeClass('collapsed');
+            });
+
+            $(this).transition({width: '50px', x: '0px', height: '50px', y: '110px', opacity: 1}, function(){
+                    $('i', this).fadeTo(0, 300, function(){
+                      $(this).addClass('icon-angle-up');
+                      $(this).fadeTo(1, 300);
+                    });
+            });
+
+        }
     });
 
 });
