@@ -16,6 +16,8 @@ local.properties
 .settings/
 .loadpath
 
+_gfx/
+
 # External tool builders
 .externalToolBuilders/
 
@@ -28,7 +30,8 @@ local.properties
 # PDT-specific
 .buildpath
 
-
+*.mp4
+.realsync
 #################
 ## Visual Studio
 #################

@@ -133,12 +133,12 @@
 
 		#nav a:hover
 		{
-			background: #383838;
+			background-color: #473c34;;
 		}
 
 		#nav a:active
 		{
-			background: #484848;
+			border-bottom: 2px solid # background-color: #473c34;;
 		}
 
 		#nav a

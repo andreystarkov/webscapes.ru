@@ -1,0 +1,164 @@
+    <!-- Portfolio modals -->
+
+  <script>
+    $(function () {
+
+        $('.carousel').carousel();
+        var pdtPlay = videojs("pdt-video");
+
+        $(".mve").on("show", function () {
+          $("body").addClass("modal-open");
+        }).on("hidden", function () {
+          $("body").removeClass("modal-open")
+        });
+
+        $('.mve').on('hidden.bs.modal', function () {
+          $('body').css({'overflow-y': 'auto'});
+          pdtPlay.pause();
+        });
+
+    });
+  </script>
+
+  <!-- Пыль да таун -->
+
+  <div class="modal fade mve" id="pdt-1">
+    <div class="modal-dialog">
+      <div class="modal-content modal-video">
+        <video id="pdt-video" style="margin-left: -1px; margin-top: -2px" class="video-js vjs-default-skin"
+        controls preload="auto" width="960" height="540" poster="images/pdt-prev.jpg">
+             <source src="video/pdt.mp4" type='video/mp4' />
+        </video>
+
+          <button type="button" class="btn btn-shut" data-dismiss="modal"><i class="icon-off icon-3x"></i> </button>
+          <button type="button" class="btn btn-shut"><i class="icon-thumbs-up icon-3x"></i> </button>
+
+      </div><!-- /.modal-content modal-pics -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- Малай видео -->
+
+  <div class="modal fade mve" id="malay">
+    <div class="modal-dialog">
+      <div class="modal-content modal-video">
+        <video id="pdt-video" style="margin-left: -1px; margin-top: -2px" class="video-js vjs-default-skin"
+        controls preload="auto" width="960" height="540" poster="images/malay-prev.jpg">
+             <source src="video/m-nachalo.mp4" type='video/mp4' />
+        </video>
+
+          <button type="button" class="btn btn-shut" data-dismiss="modal"><i class="icon-off icon-3x"></i> </button>
+          <button type="button" class="btn btn-shut"><i class="icon-heart icon-3x"></i> </button>
+          <button type="button" class="btn btn-shut"><i class="icon-youtube-play icon-3x"></i> </button>
+
+      </div><!-- /.modal-content modal-pics -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- PMP -->
+
+  <div class="modal fade" id="pmp-1">
+    <div class="modal-dialog">
+      <div class="modal-content modal-pics">
+
+     <div id="carousel-pmp" class="carousel slide pf-slider">
+
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/pmp-1.jpg" alt="">
+          </div>
+
+          <div class="item">
+            <img src="images/pmp-2.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="images/pmp-3.jpg" alt="">
+          </div>
+
+          <div class="item">
+            <img src="images/pmp-4.jpg" alt="">
+          </div>
+
+        </div>
+        <a class="left carousel-control" href="#carousel-pmp" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-pmp" data-slide="next">
+          <span class="icon-next"></span>
+        </a>
+      </div>
+
+      </div><!-- /.modal-content modal-pics -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- kruzhka-bar.ru -->
+
+  <div class="modal fade" id="kruzhka">
+    <div class="modal-dialog">
+      <div class="modal-content modal-pics">
+
+     <div id="carousel-kr" class="carousel slide pf-slider">
+
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/kruzhka-1.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="images/kruzhka-2.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="images/kruzhka-3.jpg" alt="">
+          </div>
+        </div>
+
+        <a class="left carousel-control" href="#carousel-kr" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-kr" data-slide="next">
+          <span class="icon-next"></span>
+        </a>
+      </div>
+
+      </div><!-- /.modal-content modal-pics -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- mt-klimat.ru -->
+
+  <div class="modal fade" id="mt-klimat">
+    <div class="modal-dialog">
+      <div class="modal-content modal-pics" style="height: 931px; height: 733px;">
+
+     <div id="carousel-mt" class="carousel slide pf-slider">
+
+        <div class="carousel-inner">
+
+          <div class="item active">
+            <img src="images/mt-1.jpg" alt="">
+          </div>
+
+          <div class="item">
+            <img src="images/mt-4.jpg" alt="">
+          </div>
+
+          <div class="item">
+            <img src="images/mt-2.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="images/mt-3.jpg" alt="">
+          </div>
+
+        </div>
+
+        <a class="left carousel-control" href="#carousel-mt" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-mt" data-slide="next">
+          <span class="icon-next"></span>
+        </a>
+      </div>
+
+      </div><!-- /.modal-content modal-pics -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
