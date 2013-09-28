@@ -131,6 +131,50 @@ $(function () {
       }
     }
 
+    function moveBalls(obj){
+        obj.transition({x: '-150px', y:'10px' }, 9000, function(){
+          obj.transition({x: '50px', y: '-10px'}, 7000, function(){
+            obj.transition({x: '0', y: '0'}, 2000, function(){
+              moveBalls(obj);
+            });
+          });
+        });
+    }
+
+    function moveBalls2(obj){
+        obj.transition({x: '50px', y:'5px' }, 10000, function(){
+          obj.transition({x: '-40px', y: '-5px'}, 8000, function(){
+            obj.transition({x: '0', y: '0'}, 3000, function(){
+              moveBalls2(obj);
+            });
+          });
+        });
+    }
+
+    function trueWater(obj){
+        obj.transition({x: '30px', y:'15px', opacity: '0.5' }, 7000, function(){
+          obj.transition({x: '-20px', y: '0', opacity: 1 }, 5000, function(){
+            obj.transition({x: '0', y: '0'}, 2000, function(){
+              trueWater(obj);
+            });
+          });
+        });
+    }
+
+    $('.intro-text').dblclick(function(){
+           $('.flash').animate({opacity: 1}, 300, function(){
+              $('.flash').animate({opacity: 0}, 200, function(){
+                   $('.flash').animate({opacity: '0.5'}, 400, function(){
+                        $('.flash').animate({opacity: '0.1'}, 1200);
+                   });
+              });
+           });
+    });
+
+    moveBalls($('.ball-focus'));
+    moveBalls2($('.ball-blur'));
+    trueWater($('.water'));
+
     $('.flash').everyTime(10000, function(){
 
         $(this).animate({opacity: 1}, 500, function(){

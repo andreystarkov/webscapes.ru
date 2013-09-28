@@ -46,9 +46,13 @@
         .focused { opacity: 1; width: 110%; position: absolute; height: 671px; z-index: 2; top: 0px; left: -5%; background: url(images/px/focus.png) left top; }
         .blurry { width: 110%; position: absolute; height: 671px; top: 0px; left: -5%; background: url(images/px/back.jpg) left top; }
         .darkclouds { opacity: 0.7; width: 110%; position: absolute; height: 671px; top: 0px; z-index: 3; left: -5%; background: url(images/px/darkclouds-2x.png) left top; }
+
+        .raindrops { opacity: 1; width: 110%; position: absolute; height: 671px; top: 0px; z-index: 3; left: -5%; background: url(images/px/raindrops.png) left top; }
+
         .flash { opacity:0.3; width: 110%; position: absolute; height: 671px; top: 0px; z-index: 3; left: -5%; background: url(images/px/flash-2x.png) left top; }
         .water { opacity:0.8; width: 110%; position: absolute; height: 671px; top: 0px; z-index: 3; left: -5%; background: url(images/px/water.png) left top; }
-
+        .ball-blur { opacity:0.8; width: 400px; position: absolute; height: 494px; top: 210px; z-index: 3; right: 15%; background: url(images/px/ball-blur.png) left top; }
+        .ball-focus { opacity:1; width: 577px; position: absolute; height: 494px; top: 160px; z-index: 3; left: 0px; background: url(images/px/ball-focus.png) left top; }
         .px-box { width: 100%; height: 670px; padding: 0; margin:0; position: absolute; left:0; top: 0;}
     </style>
 
@@ -71,11 +75,14 @@
 
         <div id="px-box" class="px-box">
             <ul id="scene" class="scene">
+
                 <li class="layer" data-depth="0.10"><div class="darkclouds trigger"></div></li>
                 <li class="layer" data-depth="0.20"><div class="blurry trigger"></div></li>
                 <li class="layer" data-depth="0.80"><div class="focused target"></div></li>
+                <li class="layer" data-depth="0.50"><div class="ball-blur"></div></li>
+                <li class="layer" data-depth="1.00"><div class="ball-focus"></div></li>
                 <li class="layer" data-depth="0.40"><div class="flash"></div></li>
-                <li class="layer" data-depth="0.50"><div class="water"></div></li>
+                <li class="layer" data-depth="0.90"><div class="water"></div></li>
             </ul>
         </div>
 
@@ -84,7 +91,7 @@
 
                     <!--  <div class="4u">
                         <span class="me image image-full"><img  src="images/me.jpg" alt="" /></span>
-                    </div>  -->
+                    </div>-->
                     <div class="15u intro-text">
                         <h1>Вебскейпс</h1>
                         <span>виртуальные пространства</span>
