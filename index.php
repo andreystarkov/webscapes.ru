@@ -52,8 +52,16 @@
         .flash { opacity:0.3; width: 110%; position: absolute; height: 671px; top: 0px; z-index: 3; left: -5%; background: url(images/px/flash-2x.png) left top; }
         .water { opacity:0.8; width: 110%; position: absolute; height: 671px; top: 0px; z-index: 3; left: -5%; background: url(images/px/water.png) left top; }
         .ball-blur { opacity:0.8; width: 400px; position: absolute; height: 494px; top: 210px; z-index: 3; right: 15%; background: url(images/px/ball-blur.png) left top; }
-        .ball-focus { opacity:1; width: 577px; position: absolute; height: 494px; top: 160px; z-index: 3; left: 0px; background: url(images/px/ball-focus.png) left top; }
+        .ball-evil { opacity:1; width: 577px; position: absolute; height: 494px; top: 160px; z-index: 3; left: -100px; background: url(images/px/sphere-evil.png) left top; }
+        .ball-evil-blur { opacity:1; width: 506px; position: absolute; height: 486px; top: 200px; z-index: 3; left: -9999px;
+         background: url(images/px/sphere-evil-blur.png) left top; }
+
+        .ball-focus { opacity:1; width: 577px; position: absolute; height: 494px; top: 200px; z-index: 3; right: -9999px;
+            background: url(images/px/ball-focus.png) left top; }
+
         .px-box { width: 100%; height: 670px; padding: 0; margin:0; position: absolute; left:0; top: 0;}
+        .raining { opacity: 0; width: 100%; position: absolute; height: 100%; top: 0; z-index: 50; right: 0;
+            background: url(images/px/raindrops.png) center center; }
     </style>
 
     </head>
@@ -64,8 +72,8 @@
         <nav id="nav">
             <ul>
                 <li><a href="#top"><i style="text-decoration: none" class="icon-long-arrow-up"></i></a></li>
-                <li><a href="#work">История</a></li>
-                <li><a href="#contact">Связаться онлайн</a></li>
+                <li><a href="#work">История болезни</a></li>
+                <li><a href="#contact">Написать мне</a></li>
             </ul>
         </nav>
 
@@ -74,13 +82,17 @@
         <div class="wrapper wrapper-style1 wrapper-first" style="height: 670px">
 
         <div id="px-box" class="px-box">
+            <div class="raining"></div>
             <ul id="scene" class="scene">
 
                 <li class="layer" data-depth="0.10"><div class="darkclouds trigger"></div></li>
                 <li class="layer" data-depth="0.20"><div class="blurry trigger"></div></li>
                 <li class="layer" data-depth="0.80"><div class="focused target"></div></li>
                 <li class="layer" data-depth="0.50"><div class="ball-blur"></div></li>
-                <li class="layer" data-depth="1.00"><div class="ball-focus"></div></li>
+                <li class="layer" data-depth="1.00"><div class="ball-evil"></div></li>
+                <li class="layer" data-depth="2.00"></li>
+                <li class="layer" data-depth="0.20"><div class="ball-evil-blur"></div></li>
+                <li class="layer" data-depth="1.0"><div class="ball-focus"></div></li>
                 <li class="layer" data-depth="0.40"><div class="flash"></div></li>
                 <li class="layer" data-depth="0.90"><div class="water"></div></li>
             </ul>
@@ -203,7 +215,7 @@
         <script src="js/cookie.js"></script>
         <script src="js/skel.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-
+        <script src="js/bgpos.js"></script>
         <link href="http://vjs.zencdn.net/4.1/video-js.css" rel="stylesheet">
         <script src="http://vjs.zencdn.net/4.1/video.js"></script>
 

@@ -131,21 +131,62 @@ $(function () {
       }
     }
 
+    function randomInt(minValue,maxValue){
+        return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+    }
+
     function moveBalls(obj){
-        obj.transition({x: '-150px', y:'10px' }, 9000, function(){
-          obj.transition({x: '50px', y: '-10px'}, 7000, function(){
-            obj.transition({x: '0', y: '0'}, 2000, function(){
+        obj.transition({x: randomInt(-50, 150)+'px', y:'20px' }, randomInt(1000, 15000), function(){
+          obj.transition({x: randomInt(-150, 50)+'px', y: '-20px'}, randomInt(500, 1000), function(){
+            obj.transition({rotate: '10deg'}, 300, function(){
+              obj.transition({rotate: '0deg'}, 200);
+            })
+            obj.transition({x: '0', y: '0'}, randomInt(3000, 5000), function(){
               moveBalls(obj);
             });
           });
         });
     }
 
-    function moveBalls2(obj){
-        obj.transition({x: '50px', y:'5px' }, 10000, function(){
-          obj.transition({x: '-40px', y: '-5px'}, 8000, function(){
-            obj.transition({x: '0', y: '0'}, 3000, function(){
-              moveBalls2(obj);
+    function moveBallsLeft(obj, obj2, count){
+        obj.transition({x: randomInt(-50, 100)+'px', y:'15px', scale: 0.8}, randomInt(1000, 15000), function(){
+          obj.transition({x: randomInt(-200, 50)+'px', y: '-5px', scale: 0.9}, randomInt(500, 9000), function(){
+            obj.transition({x: '0', y: '0', scale: 0.7}, randomInt(300, 400), function(){
+
+              if(count>1){
+                count = 0;
+                obj.transition({scale: 0.5}, 500, function(){
+                  obj.transition({left: '-9999px', rotate: '360deg'}, 2000, function(){
+                    obj2.transition({left: '0px', scale: 1, rotate: '360deg'}, 2000, function(){
+                      moveBallsLeft(obj2, obj, count);
+                    });
+                  });
+                });
+
+              } else {
+                count++;
+                moveBallsLeft(obj, obj2, count);
+              }
+            });
+          });
+        });
+    }
+
+    function moveBallsRight(obj, obj2, count){
+        obj.transition({x: '50px', y:'5px', scale: 0.8 }, 10000, function(){
+          obj.transition({x: '-40px', y: '-5px', scale: 0.5}, 8000, function(){
+            obj.transition({x: '0', y: '0', scale: 0.9}, 3000, function(){
+              if(count>1){
+                count = 0;
+                obj.transition({right: '-9999px', scale: 0.1}, 800, function(){
+                  obj2.transition({right: '10%', scale: 1}, 800, function(){
+                    moveBallsRight(obj2, obj, count);
+                  });
+                });
+              } else {
+                count++;
+                moveBallsRight(obj, obj2, count);
+              }
             });
           });
         });
@@ -171,12 +212,21 @@ $(function () {
            });
     });
 
-    moveBalls($('.ball-focus'));
-    moveBalls2($('.ball-blur'));
+    moveBallsRight($('.ball-blur'), $('.ball-focus'), 0);
+
+    moveBallsLeft($('.ball-evil'), $('.ball-evil-blur'), 0);
+
     trueWater($('.water'));
 
-    $('.flash').everyTime(10000, function(){
+    $('.raining').everyTime(20000, function(){
+      $(this).css({opacity: 1}).animate({backgroundPosition: '-=7050px +=12000px'}, {duration: 7000, queue: false});
 
+      $(this).animate({opacity: '0'}, 12000);
+
+
+    });
+
+    $('.flash').everyTime(10000, function(){
         $(this).animate({opacity: 1}, 500, function(){
             $(this).animate({opacity: 0.1}, 1200);
         });
