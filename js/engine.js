@@ -2,15 +2,16 @@
        im@andreystarkov.ru */
 
 $(function () {
-	$('.pf-grid li').css({'width': '440px'});
-    $("body").queryLoader2({
+	 $('.pf-grid li').css({'width': '440px'});
+
+/*   $("body").queryLoader2({
         barColor: "#8c604c",
         backgroundColor: "#2c2a27",
         percentage: false,
 
         completeAnimation: "grow",
         minimumTime: 100
-    });
+    });   */
 
     function eraHide(obj){
 
@@ -66,8 +67,6 @@ $(function () {
                   color: '#111'
             });
 
-
-
             $(obj).animate({
                 backgroundColor: 'transparent',
                 color: 'rgba(146,47,49,0.2)',
@@ -75,9 +74,6 @@ $(function () {
                 borderLeftColor: 'transparent'
             });
         }
-
-
-
 
         }
 
@@ -135,6 +131,20 @@ $(function () {
       }
     }
 
+    $('.flash').everyTime(10000, function(){
+
+        $(this).animate({opacity: 1}, 500, function(){
+            $(this).animate({opacity: 0.1}, 1200);
+        });
+    });
+
+ /*   $('.darkclouds').everyTime(8000, function(){
+
+        $(this).animate({opacity: 1}, 1000, function(){
+            $(this).animate({opacity: 0.1}, 3800);
+        });
+    });
+*/
 
     if($.cookie('sent') == '1'){
         $('#button-send').html('<i class="icon-ok-circle icon-large"></i> Ваша заявка принята');
@@ -290,6 +300,6 @@ $(function () {
         }
     });
 
-	
-	
+
+
 });
